@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { home, dashboard, search, details } = require('../controllers/catalog');
 const { createGET, createPOST } = require('../controllers/stones');
-const { registerGET, loginGET, registerPOST } = require('../controllers/user');
+const { registerGET, loginGET, registerPOST, loginPOST } = require('../controllers/user');
 const { errorPage } = require('../controllers/404');
 
 const router = Router();
@@ -17,8 +17,8 @@ router.get('/login', loginGET);
 
 
 router.post('/create/stone', createPOST);
-router.post('/register',registerPOST);
-
+router.post('/register', registerPOST);
+router.post('/login', loginPOST);
 
 router.get('*', errorPage);
 module.exports = { router };
