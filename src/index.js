@@ -12,15 +12,6 @@ async function start() {
     configHbs(app);
     configExpress(app);
     app.use(router);
-    // router.get('/home', (req, res) => {
-    //     res.render('home');
-    // });
-    // router.get('/dashboard', (req, res) => {
-    //     res.render('dashboard');
-    // });
-    // router.get('/search', (req, res) => {
-    //     res.render('search');
-    // });
     app.listen(port, () => console.log(`Server is listening on port ${port}...`));
 }
 
