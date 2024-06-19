@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 require('../models/Stone');
+require('../models/User');
 
 const projectName = 'Earth-Treasure-Vaul';
 const connectionString = `mongodb://localhost:27017/${projectName}`;
