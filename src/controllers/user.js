@@ -22,5 +22,9 @@ module.exports = {
         const token = createToken(user);
         res.cookie('token', token, { httpOnly: true });
         res.redirect('/home');
+    },
+    logout: (req,res) => {
+        res.clearCookie('token');
+        res.redirect('/home');
     }
 }

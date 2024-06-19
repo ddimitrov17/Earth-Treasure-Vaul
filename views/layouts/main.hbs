@@ -21,16 +21,18 @@
                 </div>
 
                 <!-- Logged-in users -->
+                {{#if isUserLogged}}
                 <div class="user">
                     <a href="/create/stone">Add Stones</a>
-                    <a href="#">Logout</a>
+                    <a href="/logout">Logout</a>
                 </div>
-
+                {{else}}
                 <!-- Guest users -->
                 <div class="guest">
                     <a href="/login">Login</a>
                     <a href="/register">Register</a>
                 </div>
+                {{/if}}
             </nav>
         </header>
         {{{body}}}

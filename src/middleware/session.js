@@ -8,6 +8,7 @@ function session() {
             try {
                 const payload = verifyToken(token);
                 req.user = payload;
+                res.locals.isUserLogged=true;
             } catch (error) {
                 res.clearCookie('token');
             }
