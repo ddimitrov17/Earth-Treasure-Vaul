@@ -13,6 +13,12 @@ module.exports = {
     },
     details: async (req, res) => {
         const stone = await getStoneById(req.params.id);
-        res.render('details', { stone });
+        const currentlyLoggedInUser = req?.user?.id;
+        let isOwner = currentlyLoggedInUser == stone.owner.toString() && currentlyLoggedInUser != undefined;
+        let isLiked= stone.likedList.includes(currentlyLoggedInUser);
+        res.render('details', { stone, 
+                                isOwner, 
+                                isLiked,
+                            currentlyLoggedInUser });
     }
 };

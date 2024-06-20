@@ -5,7 +5,7 @@ async function getAllStones() {
     return stones;
 }
 
-async function createStone(movieData) {
+async function createStone(movieData,owner) {
     const stone = new Stone({
         name: movieData.name,
         category: movieData.category,
@@ -14,7 +14,8 @@ async function createStone(movieData) {
         location: movieData.location,
         formula: movieData.formula,
         description: movieData.description,
-        likedList: []
+        likedList: [],
+        owner: owner
     });
     await stone.save();
     return stone;

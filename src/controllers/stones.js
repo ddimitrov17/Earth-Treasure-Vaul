@@ -5,7 +5,8 @@ module.exports = {
         res.render('create');
     },
     createPOST: async (req, res) => {
-        await createStone(req.body);
+        const owner=req.user.id;
+        await createStone(req.body,owner);
         res.redirect('/home');
     }
 }

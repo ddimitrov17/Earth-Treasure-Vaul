@@ -1,0 +1,48 @@
+[
+    {
+      "name": "Quartz",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Quartz%2C_Tibet.jpg/800px-Quartz%2C_Tibet.jpg",
+      "category": "Mineral",
+      "color": "Colorless",
+      "location": "Worldwide",
+      "formula": "SiO₂",
+      "description": "Quartz is one of the most abundant minerals in the Earth's crust. It comes in a wide variety of colors and forms and is used in many types of jewelry and other applications."
+    },
+    {
+      "name": "Diamond",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Brilliant_%28PSF%29.jpg/800px-Brilliant_%28PSF%29.jpg",
+      "category": "Mineral",
+      "color": "Colorless",
+      "location": "Africa",
+      "formula": "C",
+      "description": "Diamond is the hardest known natural material. It is a precious gemstone prized for its clarity and sparkle, and is often used in engagement rings and high-end jewelry."
+    },
+    {
+      "name": "Emerald",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Emerald_Beryl_Gem.jpg/800px-Emerald_Beryl_Gem.jpg",
+      "category": "Gemstone",
+      "color": "Green",
+      "location": "Colombia",
+      "formula": "Be₃Al₂(SiO₃)₆",
+      "description": "Emerald is a green gemstone and a variety of the mineral beryl. It has been highly valued since ancient times and is known for its vibrant green color."
+    },
+    {
+      "name": "Amethyst",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Amethyst._Cerro_de_la_Concordia_Mine%2C_Piedra_Parada%2C_Tula%2C_Tamayolipas%2C_Mexico.jpg/800px-Amethyst._Cerro_de_la_Concordia_Mine%2C_Piedra_Parada%2C_Tula%2C_Tamayolipas%2C_Mexico.jpg",
+      "category": "Gemstone",
+      "color": "Purple",
+      "location": "Brazil",
+      "formula": "SiO₂",
+      "description": "Amethyst is a violet variety of quartz and is often used in jewelry. It has been highly valued for its striking color and historical significance in various cultures."
+    },
+    {
+      "name": "Opal",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Australian_black_opal_stone.jpg/800px-Australian_black_opal_stone.jpg",
+      "category": "Mineral",
+      "color": "Varied",
+      "location": "Australia",
+      "formula": "SiO₂·nH₂O",
+      "description": "Opal is a unique gemstone known for its play-of-color, which is the ability to display various colors when viewed from different angles. It is often found in Australia."
+    }
+  ]
+  

@@ -1,10 +1,14 @@
 const { User } = require("../models/User");
 const bcrypt = require('bcrypt')
 
-async function register(userData) {
+async function register(email,password) {
+    const existingUser=await User.findOne({ email });
+    if (existingUser) {
+        throw new Error('User already exists!');
+    };
     const user = new User({
-        email: userData.email,
-        password: await bcrypt.hash(userData.password, 10)
+        email: email,
+        password: await bcrypt.hash(password, 10)
     });
     await user.save();
     return user;

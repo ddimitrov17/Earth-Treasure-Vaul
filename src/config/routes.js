@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const { home, dashboard, search, details } = require('../controllers/catalog');
 const { createGET, createPOST } = require('../controllers/stones');
-const { registerGET, loginGET, registerPOST, loginPOST, logout } = require('../controllers/user');
+const { registerGET, loginGET, registerPOST, loginPOST, logout, like } = require('../controllers/user');
 const { errorPage } = require('../controllers/404');
 
 const router = Router();
@@ -15,7 +15,7 @@ router.get('/register', registerGET);
 router.get('/login', loginGET);
 router.get('/logout',logout);
 
-
+router.get('/like/:userId/:stoneId',like);
 
 router.post('/create/stone', createPOST);
 router.post('/register', registerPOST);
