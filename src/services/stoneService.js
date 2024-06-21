@@ -40,9 +40,14 @@ async function updateStone(stoneId,stoneData) {
     return stone;
 };
 
+async function deleteStone(stoneId) {
+    await Stone.findByIdAndDelete(stoneId);
+}
+
 module.exports = {
     getAllStones,
     createStone,
     getStoneById,
-    updateStone
+    updateStone,
+    deleteStone
 }

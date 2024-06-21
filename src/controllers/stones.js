@@ -1,4 +1,4 @@
-const { createStone, getStoneById, updateStone } = require("../services/stoneService");
+const { createStone, getStoneById, updateStone, deleteStone } = require("../services/stoneService");
 
 module.exports = {
     createGET: (req, res) => {
@@ -18,5 +18,14 @@ module.exports = {
         const stoneData=req.body;
         await updateStone(id,stoneData);
         res.redirect('/details/' + id);
+    },
+    deleteGET: async (req,res) => {
+        const stone = await getStoneById(req.params.id);
+        res.render('delete', { stone });
+    },
+    deletePOST: async (req,res) => {
+        const stoneId=req.params.id;
+        await deleteStone(stoneId);
+        res.redirect('/home');
     }
 }
