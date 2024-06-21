@@ -20,7 +20,6 @@ module.exports = {
     loginPOST: async (req, res) => {
         const { email, password } = req.body;
         const user = await login(email, password);
-        console.log(`Logged in as ${email}`);
         const token = createToken(user);
         res.cookie('token', token, { httpOnly: true });
         res.redirect('/home');
