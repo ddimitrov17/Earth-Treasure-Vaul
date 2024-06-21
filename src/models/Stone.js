@@ -32,7 +32,8 @@ const stoneSchema = new Schema({
     },
     likedList: {
         type: Array,
-        ref: 'User'
+        ref: 'User',
+        default: []
     },
     owner: {
         type: SchemaTypes.ObjectId,
