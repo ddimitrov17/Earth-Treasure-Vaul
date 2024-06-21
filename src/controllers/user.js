@@ -12,6 +12,21 @@ module.exports = {
     },
     registerPOST: async (req, res) => {
         const { email, password, repassword } = req.body;
+        if (!email || email.length < 10) {
+            let error = 'Invalid email input!'
+            res.render('register', { error });
+            return;
+        };
+        if (password.length < 4) {
+            let error = 'Password should be at least 4 symbols!';
+            res.render('register', { error });
+            return;
+        }
+        if (password!= repassword) {
+            let error = 'Passwords do not match!';
+            res.render('register', { error });
+            return;
+        }
         const user = await register(email, password);
         const token = createToken(user);
         res.cookie('token', token, { httpOnly: true });
