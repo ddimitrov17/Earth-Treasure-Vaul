@@ -26,8 +26,23 @@ async function getStoneById(stoneId) {
     return stone;
 }
 
+async function updateStone(stoneId,stoneData) {
+    const stone = await Stone.findById(stoneId);
+    stone.name=stoneData.name;
+    stone.category=stoneData.category;
+    stone.color=stoneData.color;
+    stone.image=stoneData.image;
+    stone.location=stoneData.location;
+    stone.formula=stoneData.formula;
+    stone.description=stoneData.description;
+
+    stone.save();
+    return stone;
+};
+
 module.exports = {
     getAllStones,
     createStone,
-    getStoneById
+    getStoneById,
+    updateStone
 }
